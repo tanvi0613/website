@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:0;
+  padding:0;
+}
+:root{
+  /* --primary-color:#919097;
+  --primary-color2: #a94451;
+  --primary-color3: #b29cb0;
+  --secondary-color1:#b6b9c6;
+  --secondary-color2:#ccb796; */
+  --dim-gray: #6D7275ff;
+  --timberwolf: #D0CDCDff;
+  --champagne-pink: #E0D3CBff;
+  --rose-quartz: #A1989Dff;
+  --jet: #313334ff;
+  --color-green:#42AD00;
+  --color-grey:#aaa;
+  --color-accent:#F56692;
+  --color-delete:#FF0000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'BehanceFont'; 
+  src: url('../public/fonts/behance-656346cc88819.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }

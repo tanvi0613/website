@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import { useMemo, useState } from 'react';
 import './App.css';
+import Navigation from './Components/Navigation/Navigation';
+import Orb from './Components/Orb/Orb';
+import TopNav from './Components/TopNav/TopNav';
 
 function App() {
+  const [active, setActive] = useState(1);
+
+  const displayData= () => {
+    switch(active){
+      case 1:
+        return 
+    }
+  }
+
+  //save the animation in memory so when you click somewhere it doesn't reset
+  const orbMemo = useMemo(()=>{
+    return <Orb/>
+  },[])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {orbMemo}
+      <div className='MainLayout'>
+        <TopNav/>
+        <Navigation active={active} setActive={setActive}/>
+        <div className='main'>
+          {displayData()}
+        </div>
+      </div>
     </div>
   );
 }
